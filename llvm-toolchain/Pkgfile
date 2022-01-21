@@ -1,0 +1,83 @@
+# Description:	LLVM toolchain - llvm,clang,clang-tools-extra,compiler-rt,lld
+# URL:		http://llvm.org/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	cmake libedit libxml2 python3-setuptools
+
+name=llvm-toolchain
+_realname=llvm-project
+version=13.0.0
+release=1
+source=(https://github.com/llvm/${_realname}/releases/download/llvmorg-${version}/${_realname}-${version}.src.tar.xz \
+	llvm-do-not-install-static-libraries.patch)
+
+build() {
+	cd ${_realname}-${version}.src
+
+	patch -p1 -i $SRC/llvm-do-not-install-static-libraries.patch
+
+	mkdir build
+	cd build
+
+	export CC="clang"
+	export CXX="clang++"
+
+	CFLAGS="${CFLAGS/ -fuse-ld=mold/}"
+	CXXFLAGS="${CXXFLAGS/ -fuse-ld=mold/}"
+	LDFLAGS=${LDFLAGS/ -fuse-ld=mold/}
+
+	cmake .. \
+		-DCMAKE_BUILD_TYPE="Release" \
+		-DCMAKE_INSTALL_PREFIX="/usr " \
+		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-DLLVM_TARGETS_TO_BUILD="X86;AMDGPU;BPF;NVPTX" \
+		-DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;compiler-rt;lld" \
+		-DLLVM_OPTIMIZED_TABLEGEN=ON \
+		-DLLVM_BUILD_LLVM_DYLIB=ON \
+		-DLLVM_LINK_LLVM_DYLIB=ON \
+		-DLLVM_INSTALL_UTILS=ON \
+		-DLLVM_ENABLE_FFI=ON \
+		-DLLVM_ENABLE_ZLIB=ON \
+		-DLLVM_USE_PERF=ON \
+		-DLLVM_ENABLE_PIC=ON \
+		-DLLVM_ENABLE_RTTI=ON \
+		-DLLVM_USE_LINKER=lld \
+		-DLLVM_ENABLE_LTO=Thin \
+		-DLLVM_INCLUDE_TESTS=OFF \
+		-DLLVM_ENABLE_LIBCXX=OFF \
+		-DLLVM_ENABLE_SPHINX=OFF \
+		-DLLVM_ENABLE_OCAMLDOC=OFF \
+		-DLLVM_INCLUDE_EXAMPLES=OFF \
+		-DCLANG_VENDOR="SAUX x86_64" \
+		-DLLD_VENDOR="SAUX x86_64" \
+		-Wno-dev \
+		../llvm
+
+	make -O ${JOBS:+-j ${JOBS}} V=1 VERBOSE=1
+
+	make DESTDIR=$PKG install
+
+	install -d $PKG/usr/lib/bfd-plugins
+	ln -s ../libLTO.so $PKG/usr/lib/bfd-plugins/
+
+	/usr/bin/python3 $SRC/${_realname}-${version}.src/llvm/utils/lit/setup.py build
+	/usr/bin/python3 $SRC/${_realname}-${version}.src/llvm/utils/lit/setup.py install \
+		--prefix=/usr \
+		--optimize=1 \
+		--skip-build \
+		--root=$PKG
+
+	/usr/bin/python3 -m compileall -d $SRC/${_realname}-${version}.src/llvm/utils/lit \
+		-x run-find-all-symbols.py $PKG
+	/usr/bin/python3 -O -m compileall -d $SRC/${_realname}-${version}.src/llvm/utils/lit \
+		-x run-find-all-symbols.py $PKG
+	/usr/bin/python3 -OO -m compileall -d $SRC/${_realname}-${version}.src/llvm/utils/lit \
+		-x run-find-all-symbols.py $PKG
+
+	mv $PKG/usr/libexec/{analyze-*,*-analyzer,intercept-*} $PKG/usr/lib/clang
+	sed -i 's|libexec|lib/clang|' $PKG/usr/bin/scan-build
+
+	rmdir $PKG/usr/libexec
+
+	find $PKG -type f -name '*.a' -delete
+}
