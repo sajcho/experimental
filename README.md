@@ -1,11 +1,4 @@
-# saux
-ports for x86_64 only
+# saux-experimental
 
-Warning:
-
-This is an experimental repo.
-The ports are created using the experimental version GCC 12.0.0
-and where the software source code allows,
-is use linker "mold" - (https://github.com/rui314/mold/).
-
-Use at your own risk !!!
+The ports are built using the experimental version of GCC 13.0.0
+The results are contained in this document.
