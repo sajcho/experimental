@@ -1,0 +1,72 @@
+# Description:	The C library used in the GNU system
+# URL:		http://www.gnu.org/software/libc/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	python3 texinfo
+
+name=glibc
+version=20221219
+_commit=0fb10e49ad169374650534509767ec1d4232e230
+# Date:   Mon Dec 19 02:38:38 2022 +0100
+release=0
+source=(https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.tar.xz \
+	hosts resolv.conf nsswitch.conf host.conf ld.so.conf nscd.run)
+
+build() {
+	# install kernel headers
+	cd linux-6.1
+
+	make mrproper
+	make ARCH=$CARCH INSTALL_HDR_PATH=$PKG/usr headers_install
+	chown -R root:root $PKG/usr
+
+	cd $SRC
+	git clone git://sourceware.org/git/glibc.git
+	cd $SRC/${name}
+	git reset --hard ${_commit}
+
+	# Fix build version
+	sed 's|VERSION "2.36.9000"|VERSION "2.36.9000-20221219"|' -i version.h
+
+	mkdir build
+	cd build
+
+	../configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib \
+		--with-headers=$PKG/usr/include \
+		--enable-cet \
+		--enable-kernel=4.9 \
+		--enable-bind-now \
+		--enable-tunables \
+		--enable-stack-protector=strong \
+		--disable-profile \
+		--disable-timezone-tools \
+		--with-pkgversion=SAUX-x86_64 \
+		--without-gd \
+		--build=$CHOST \
+		--host=$CHOST \
+		libc_cv_slibdir=/lib \
+		libc_cv_complocaledir=/usr/lib/locale
+
+	make V=1
+
+	# Optional
+	#make -k check 2>&1 | tee testlog
+	#grep -A 5 Summary testlog > $PKGMK_PACKAGE_DIR/test-result-${name}-${version}-${release}.txt
+
+	make install_root=$PKG install
+
+	install -m 0644 $SRC/${name}/nscd/nscd.conf $PKG/etc
+
+	# nscd runit service
+	install -d $PKG/etc/sv/nscd
+	install -m 0755 $SRC/nscd.run $PKG/etc/sv/nscd/run
+	ln -s /run/runit/supervise.nscd $PKG/etc/sv/nscd/supervise
+
+	install -m 0644 $SRC/{hosts,resolv.conf,nsswitch.conf,host.conf,ld.so.conf} $PKG/etc
+	ln -sf ../usr/share/zoneinfo/UTC $PKG/etc/localtime
+	install -d $PKG/etc/ld.so.conf.d $PKG/usr/lib/locale
+	touch $PKG/etc/ld.so.cache
+
+	rm -r $PKG/usr/share/{info,locale}
+}
