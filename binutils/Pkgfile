@@ -4,19 +4,12 @@
 # Depends on:	flex texinfo zlib
 
 name=binutils
-_realname=binutils-gdb
-version=20221219
-_develversion=2.39.50
-_commit=2a517ca94d30ee7ea34818105a46648432e02fee
-# Date:   Mon Dec 19 00:01:23 2022 +0000
+version=2.39.90
 release=0
-source=()
+source=(https://sourceware.org/pub/binutils/snapshots/binutils-2.39.90.tar.xz)
 
 build() {
-	cd $SRC
-	git clone git://sourceware.org/git/binutils-gdb.git
-	cd $SRC/${_realname}
-	git reset --hard ${_commit}
+	cd ${name}-${version}
 
 	mkdir build
 	cd build
@@ -39,7 +32,7 @@ build() {
 		--disable-nls \
 		--disable-werror \
 		--disable-multilib \
-		--disable-gprofng  \
+		--disable-gprofng \
 		--disable-jansson \
 		--disable-sim \
 		--disable-gdb \

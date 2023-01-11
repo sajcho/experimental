@@ -164,10 +164,10 @@ drwxr-xr-x	root/root	usr/lib/ldscripts/
 -rw-r--r--	root/root	usr/lib/ldscripts/i386pep.xn
 -rw-r--r--	root/root	usr/lib/ldscripts/i386pep.xr
 -rw-r--r--	root/root	usr/lib/ldscripts/i386pep.xu
--rwxr-xr-x	root/root	usr/lib/libbfd-2.39.50.20221219.so
+-rwxr-xr-x	root/root	usr/lib/libbfd-2.39.90.20221231.so
 -rw-r--r--	root/root	usr/lib/libbfd.a
 -rwxr-xr-x	root/root	usr/lib/libbfd.la
-lrwxrwxrwx	root/root	usr/lib/libbfd.so -> libbfd-2.39.50.20221219.so
+lrwxrwxrwx	root/root	usr/lib/libbfd.so -> libbfd-2.39.90.20221231.so
 -rw-r--r--	root/root	usr/lib/libctf-nobfd.a
 -rwxr-xr-x	root/root	usr/lib/libctf-nobfd.la
 lrwxrwxrwx	root/root	usr/lib/libctf-nobfd.so -> libctf-nobfd.so.0.0.0
@@ -179,10 +179,10 @@ lrwxrwxrwx	root/root	usr/lib/libctf.so -> libctf.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libctf.so.0 -> libctf.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libctf.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libiberty.a
--rwxr-xr-x	root/root	usr/lib/libopcodes-2.39.50.20221219.so
+-rwxr-xr-x	root/root	usr/lib/libopcodes-2.39.90.20221231.so
 -rw-r--r--	root/root	usr/lib/libopcodes.a
 -rwxr-xr-x	root/root	usr/lib/libopcodes.la
-lrwxrwxrwx	root/root	usr/lib/libopcodes.so -> libopcodes-2.39.50.20221219.so
+lrwxrwxrwx	root/root	usr/lib/libopcodes.so -> libopcodes-2.39.90.20221231.so
 -rw-r--r--	root/root	usr/lib/libsframe.a
 -rwxr-xr-x	root/root	usr/lib/libsframe.la
 lrwxrwxrwx	root/root	usr/lib/libsframe.so -> libsframe.so.0.0.0
