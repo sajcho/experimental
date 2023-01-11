@@ -1,5 +1,5 @@
 # saux - experimental repository
-
+## x86_64
 The ports are built using the devel version of:
 
 GCC 13.0.0,
