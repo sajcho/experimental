@@ -4,16 +4,16 @@
 # Depends on:	python3 texinfo
 
 name=glibc
-version=20221219
-_commit=0fb10e49ad169374650534509767ec1d4232e230
-# Date:   Mon Dec 19 02:38:38 2022 +0100
+version=20230109
+_commit=ae612c45efb5e34713859a5facf92368307efb6e
+# Date:   Fri Jan 6 21:45:36 2023 +0000
 release=0
-source=(https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.tar.xz \
+source=(https://git.kernel.org/torvalds/t/linux-6.2-rc3.tar.gz \
 	hosts resolv.conf nsswitch.conf host.conf ld.so.conf nscd.run)
 
 build() {
 	# install kernel headers
-	cd linux-6.1
+	cd linux-6.2-rc3
 
 	make mrproper
 	make ARCH=$CARCH INSTALL_HDR_PATH=$PKG/usr headers_install
@@ -25,7 +25,7 @@ build() {
 	git reset --hard ${_commit}
 
 	# Fix build version
-	sed 's|VERSION "2.36.9000"|VERSION "2.36.9000-20221219"|' -i version.h
+	sed 's|VERSION "2.36.9000"|VERSION "2.36.9000-20230109"|' -i version.h
 
 	mkdir build
 	cd build

@@ -498,6 +498,7 @@ drwxr-xr-x	root/root	usr/include/linux/android/
 -rw-r--r--	root/root	usr/include/linux/arm_sdei.h
 -rw-r--r--	root/root	usr/include/linux/aspeed-lpc-ctrl.h
 -rw-r--r--	root/root	usr/include/linux/aspeed-p2a-ctrl.h
+-rw-r--r--	root/root	usr/include/linux/aspeed-video.h
 -rw-r--r--	root/root	usr/include/linux/atalk.h
 -rw-r--r--	root/root	usr/include/linux/atm.h
 -rw-r--r--	root/root	usr/include/linux/atm_eni.h
@@ -731,6 +732,7 @@ drwxr-xr-x	root/root	usr/include/linux/iio/
 -rw-r--r--	root/root	usr/include/linux/ioam6_iptunnel.h
 -rw-r--r--	root/root	usr/include/linux/ioctl.h
 -rw-r--r--	root/root	usr/include/linux/iommu.h
+-rw-r--r--	root/root	usr/include/linux/iommufd.h
 -rw-r--r--	root/root	usr/include/linux/ioprio.h
 -rw-r--r--	root/root	usr/include/linux/ip.h
 -rw-r--r--	root/root	usr/include/linux/ip6_tunnel.h
@@ -739,6 +741,7 @@ drwxr-xr-x	root/root	usr/include/linux/iio/
 -rw-r--r--	root/root	usr/include/linux/ipmi.h
 -rw-r--r--	root/root	usr/include/linux/ipmi_bmc.h
 -rw-r--r--	root/root	usr/include/linux/ipmi_msgdefs.h
+-rw-r--r--	root/root	usr/include/linux/ipmi_ssif_bmc.h
 -rw-r--r--	root/root	usr/include/linux/ipsec.h
 -rw-r--r--	root/root	usr/include/linux/ipv6.h
 -rw-r--r--	root/root	usr/include/linux/ipv6_route.h
@@ -1152,6 +1155,7 @@ drwxr-xr-x	root/root	usr/include/linux/tc_ematch/
 -rw-r--r--	root/root	usr/include/linux/tc_ematch/tc_em_text.h
 -rw-r--r--	root/root	usr/include/linux/tcp.h
 -rw-r--r--	root/root	usr/include/linux/tcp_metrics.h
+-rw-r--r--	root/root	usr/include/linux/tdx-guest.h
 -rw-r--r--	root/root	usr/include/linux/tee.h
 -rw-r--r--	root/root	usr/include/linux/termios.h
 -rw-r--r--	root/root	usr/include/linux/thermal.h
@@ -1371,6 +1375,7 @@ drwxr-xr-x	root/root	usr/include/rdma/hfi/
 -rw-r--r--	root/root	usr/include/rdma/ib_user_sa.h
 -rw-r--r--	root/root	usr/include/rdma/ib_user_verbs.h
 -rw-r--r--	root/root	usr/include/rdma/irdma-abi.h
+-rw-r--r--	root/root	usr/include/rdma/mana-abi.h
 -rw-r--r--	root/root	usr/include/rdma/mlx4-abi.h
 -rw-r--r--	root/root	usr/include/rdma/mlx5-abi.h
 -rw-r--r--	root/root	usr/include/rdma/mlx5_user_ioctl_cmds.h
@@ -1850,7 +1855,7 @@ lrwxrwxrwx	root/root	usr/lib/libc_malloc_debug.so -> ../../lib/libc_malloc_debug
 lrwxrwxrwx	root/root	usr/lib/libcrypt.so -> ../../lib/libcrypt.so.1
 -rw-r--r--	root/root	usr/lib/libdl.a
 -rw-r--r--	root/root	usr/lib/libg.a
--rw-r--r--	root/root	usr/lib/libm-2.36.9000-20221219.a
+-rw-r--r--	root/root	usr/lib/libm-2.36.9000-20230109.a
 -rw-r--r--	root/root	usr/lib/libm.a
 -rw-r--r--	root/root	usr/lib/libm.so
 -rw-r--r--	root/root	usr/lib/libmcheck.a
