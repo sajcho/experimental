@@ -70,6 +70,7 @@ drwxr-xr-x	root/root	usr/include/c++/13.0.0/bits/
 -rw-r--r--	root/root	usr/include/c++/13.0.0/bits/char_traits.h
 -rw-r--r--	root/root	usr/include/c++/13.0.0/bits/charconv.h
 -rw-r--r--	root/root	usr/include/c++/13.0.0/bits/chrono.h
+-rw-r--r--	root/root	usr/include/c++/13.0.0/bits/chrono_io.h
 -rw-r--r--	root/root	usr/include/c++/13.0.0/bits/codecvt.h
 -rw-r--r--	root/root	usr/include/c++/13.0.0/bits/concept_check.h
 -rw-r--r--	root/root	usr/include/c++/13.0.0/bits/cow_string.h
@@ -1593,6 +1594,7 @@ lrwxrwxrwx	root/root	usr/lib/libgomp.so.1 -> libgomp.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libhwasan.so -> libhwasan.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libhwasan.so.0 -> libhwasan.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libhwasan.so.0.0.0
+-rw-r--r--	root/root	usr/lib/libhwasan_preinit.o
 -rw-r--r--	root/root	usr/lib/libitm.a
 -rwxr-xr-x	root/root	usr/lib/libitm.la
 lrwxrwxrwx	root/root	usr/lib/libitm.so -> libitm.so.1.0.0
