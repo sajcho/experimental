@@ -1,0 +1,6 @@
+untrusted comment: verify with /etc/ports/core-x86_64.pub
+RWQyKH7cMutLvTOKb3gE4ZQL0PIpYEVR64rhAVPYcEjtvIe4tVYFv3ZNY29WpQSVMclYf1wDCssVrKIhR+/MxqJG6XzqgYx4xQg=
+SHA256 (Pkgfile) = e25abb941c99fffd583fd957abf8b70b53d0374c5a73c07622ca26ee8452b52a
+SHA256 (.footprint) = 8070f5d898e3f771f1802b66bfb59befb33e495d3242d36140d3dda3209eeca4
+SHA256 (meson-1.1.1.tar.gz) = d04b541f97ca439fb82fab7d0d480988be4bd4e62563a5ca35fadb5400727b1c
+SHA256 (build-meson) = 541f33d903eacc18493ed1172b1e937683665928a6c6928c9bf633ffca8adf8a
