@@ -27,7 +27,7 @@ build() {
 		-Dusethreads \
 		-Duselargefiles \
 		-Doptimize=none \
-		-Dccflags="$CFLAGS" \
+		-Dccflags="$CFLAGS -flto=auto -ffat-lto-objects" \
 		-Dldflags="$LDFLAGS" \
 		-Dccdlflags="-Wl,--enable-new-dtags $LDFLAGS" \
 		-Dlddlflags="-shared $LDFLAGS" \
