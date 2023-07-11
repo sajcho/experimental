@@ -6,15 +6,14 @@
 name=glibc
 version=2.37.9000
 release=0
-_commit=7ff33eca6860648fb909df954da4996ce853d01d
-# Author: Carlos O'Donell <carlos@redhat.com>
-# Date:   Fri Jul 7 11:27:08 2023 -0400
-source=(https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.4.2.tar.xz \
+_commit=7f079fdc16e88ebb8020e17b2fd900e8924da29a
+# Date: Tue Jul 11 09:33:52 CEST 2023
+source=(https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.4.3.tar.xz \
 	hosts resolv.conf nsswitch.conf host.conf ld.so.conf nscd.run)
 
 build() {
 	# install kernel headers
-	cd $SRC/linux-6.4.2
+	cd $SRC/linux-6.4.3
 
 	make mrproper
 	make ARCH=$CARCH INSTALL_HDR_PATH=$PKG/usr headers_install
@@ -50,7 +49,6 @@ build() {
 
 	# Optional
 	make -k check || :
-	cp tests.sum $PKGMK_PACKAGE_DIR/${name}-${version}-test-summary.txt
 
 	make install_root=$PKG install
 
