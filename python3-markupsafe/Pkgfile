@@ -6,7 +6,7 @@
 name=python3-markupsafe
 _realname=MarkupSafe
 version=2.1.2
-release=1
+release=2
 source=(https://files.pythonhosted.org/packages/source/M/$_realname/${_realname}-${version}.tar.gz)
 
 build() {
@@ -14,8 +14,7 @@ build() {
 
 	pip3 wheel -w dist --isolated --no-deps $PWD
 
-	PIP_CONFIG_FILE=/dev/null \
-		/usr/bin/pip3 install \
+	/usr/bin/pip3 install \
 		--root-user-action=ignore \
 		--no-warn-script-location \
 		--ignore-installed \
