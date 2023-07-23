@@ -1,5 +1,0 @@
-untrusted comment: verify with /etc/ports/xorg-x86_64.pub
-RWS6GSB2Zz1AIl74tUcplQ9xqw0Q8emUTmoHZ/6eYSVcGTiC01eDOuHOGoAFkPt0XFDqS2RC1Eg77HmbW5/UAgnm2vYi5ZHGSAg=
-SHA256 (Pkgfile) = c6846faa4f568b7028534025673c3d4ac2c3c2b94e2c8c8b4008b1bf80560ff9
-SHA256 (.footprint) = 48b9ac9a6c19de2786155cbd41452504ce867d2054d23e307b842dafccc3861e
-SHA256 (xcb-proto-1.15.2.tar.xz) = 7072beb1f680a2fe3f9e535b797c146d22528990c72f63ddb49d2f350a3653ed
