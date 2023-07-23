@@ -6,4 +6,5 @@ The ports are built using the devel version of:
 ### Binutils 2.40.90.20230703
 ### Glibc 2.37.9000
 ### Perl 5.38.0
-### Python 3.12.0b3
+### Python 3.12.0b4
+### Libxcrypt 4.4.36
