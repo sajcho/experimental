@@ -1,0 +1,6 @@
+untrusted comment: verify with /etc/ports/core-x86_64.pub
+RWQyKH7cMutLvWZEBa6vusaFq40WzG40WFyq1gpA9z5jEanqqCHj0pdXTqkd+mg1ppHSV1qcbUkW/kxet/atrQqkJXMKvSuWbw4=
+SHA256 (Pkgfile) = b48d60b4fc02bee83bc68e08f819d20347b641b9e28c8e93cbaa49342fc69d01
+SHA256 (.footprint) = e65c35afa67f9d5b01d44c56ca3381422f17fefd3aeec72e67ae1bdb3320c378
+SHA256 (libcap-ng-0.8.3.tar.gz) = bed6f6848e22bb2f83b5f764b2aef0ed393054e803a8e3a8711cb2a39e6b492d
+SHA256 (libcap-ng-0.8.3-apply-disable.patch) = 271f00bf4316d3db5e0a29fbe860198249e62aaff726ddd2f6292e6e68250995
