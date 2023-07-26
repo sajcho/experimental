@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/core-x86_64.pub
+RWQyKH7cMutLvZuJr+/okHd+ONgKw/6jIgRskVFNQUsPOebOrTN6ZU1YOTtEBYAokMAJR3NRRGyeZOdA4Z4WbRXXHFwRpUK6RgI=
+SHA256 (Pkgfile) = 877996204bc79082239a696e6ead86a9f9ee838698d054c82aea0e93ae45e3e1
+SHA256 (.footprint) = 62eac23ee751339c7f32ad9a42f2003658084459ab78e2538cca2b38f7aaa467
+SHA256 (mpfr-4.2.0.tar.xz) = 06a378df13501248c1b2db5aa977a2c8126ae849a9d9b7be2546fb4a9c26d993
