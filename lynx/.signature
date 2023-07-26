@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/core-x86_64.pub
+RWQyKH7cMutLvSO7YBREvVzi/5o9F5/FPkyR1/ocrYNu7N4iGW6yVJPaw2Z4jx0x/5mxIpv4cNdtztHFlaRO1/bml4Bxs/cPpwA=
+SHA256 (Pkgfile) = 4eea4b72122adc1a8d2bffc22993d4d9790cc330559c53e74ed194bcbcd047ad
+SHA256 (.footprint) = 60899837c62972f00870acf0c70ddaf88f4bb0d10e26b38de59592ef79ac5319
+SHA256 (lynx2.9.0dev.12.tar.gz) = a084e3b4a865969c4e30a733de3d4fe4a1f20ded14fbed6c320de5f7134c7716
