@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/core-x86_64.pub
+RWQyKH7cMutLvQ8M1Hxv1H/w/4U0t2eXyGfF3gdaGa3jVnqRyy7W1Dle8eMyfxZrd1FYoJK/b8D55z6400D6a1Zv1BwMV0/e9QA=
+SHA256 (Pkgfile) = 6d7f0220dff146c291b1594726452b4b84aa4d0bd8d3debdbb9e4d3be88940c0
+SHA256 (.footprint) = ae6ec010cf38ff8acb9c0341aa7ec201b0b21dc712b084e20ac5e16689fdb214
+SHA256 (automake-1.16.5.tar.xz) = f01d58cd6d9d77fbdca9eb4bbd5ead1988228fdb73d6f7a201f5f8d6b118b469
