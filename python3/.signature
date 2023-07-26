@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/core-x86_64.pub
+RWQyKH7cMutLvafimOZs4zf/dx+XHRuDXshuKcdGkuw8WrAYQdEcysAPK2xL+0IucvAehe0BtpN8W+XaIn4WpYy+jnGq8T40OQk=
+SHA256 (Pkgfile) = 432f86e8f7d57c11717edf5931f2185a153b9a9507f654118afa411705dc748f
+SHA256 (.footprint) = 40c5f485537070c9c55e0e3cbaa482bd42027cb7a1b7ab8dc89f8f83eac666a0
+SHA256 (Python-3.12.0b4.tar.xz) = f05710c36aee5850f5c2769be76b80bf212aec351438fdf8adc20c38c8361fac
