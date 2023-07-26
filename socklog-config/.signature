@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/core-x86_64.pub
+RWQyKH7cMutLvbXZ8jovnfpfDzzMDfQRvqe5KY9JeVaIZz44RKKcXmlw53BJcHZn/wZ6oAhMmoQHhOAIfZ+GJl+D+Js0uas7Qg4=
+SHA256 (Pkgfile) = 259769e4c6e712f2523e6e2613559a48d75513b655d1c256582c585fa1400a26
+SHA256 (.footprint) = 387755e82f7e2122fdeec9fe91352bf0eca3a9ec9f47a073712677921dc908c2
+SHA256 (socklog-void-20200115.tar.gz) = 2bbd906513584ef1d4b729cdaf19356eaacb37d00e29fd26f7f06e34f492ed5f
