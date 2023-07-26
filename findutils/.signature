@@ -1,0 +1,5 @@
+untrusted comment: verify with /etc/ports/core-x86_64.pub
+RWQyKH7cMutLvbNDPhAfdyL6firJl19wdqL8EPKT8531nJ49Hj24nyf0wEMSBdM9Y8vT0lo5CRJVe9kQegyuMLO8NswPBzfUqA0=
+SHA256 (Pkgfile) = 0e596c89659411b68d2c723461718dd6395ea04a0954f0dc9fedaedc2b271c35
+SHA256 (.footprint) = d10651884f1a51d1638d4b7f18513cf2cf7e84994a9179220bf60d4bc1ae3586
+SHA256 (findutils-4.9.0.tar.xz) = a2bfb8c09d436770edc59f50fa483e785b161a3b7b9d547573cb08065fd462fe
