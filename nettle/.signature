@@ -1,0 +1,5 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ4sp3Yp41WdN4jQtL9MGVhnBYFBi6GFV22I5m6VEUtPHAbNXj0y6N2OkJYROL4qzVD+6hXlL96+mbkN0RoVHUQY=
+SHA256 (Pkgfile) = 74f33e23ee40ea3e94b0a49ed81a4c748bd69795a9b6347207f8a8ead5cde706
+SHA256 (.footprint) = d7ac6fb3f38f9c0f257034061c0ace301630d18a84a12b9d136ae172b39b7387
+SHA256 (nettle-3.9.1.tar.gz) = ccfeff981b0ca71bbd6fbcb054f407c60ffb644389a5be80d6716d5b550c6ce3

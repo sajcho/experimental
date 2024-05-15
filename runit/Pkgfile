@@ -1,0 +1,42 @@
+# Description:	a cross-platform Unix init scheme with service supervision
+# URL:		http://smarden.org/runit/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+
+name=runit
+version=2.1.2
+release=2
+source=(http://smarden.org/${name}/${name}-${version}.tar.gz \
+	runit-patchset-by-saux.patch \
+	_sv sv)
+
+build() {
+	cd $SRC/admin/${name}-${version}
+
+	# apply patch
+	patch -d $SRC -p1 -i $SRC/runit-patchset-by-saux.patch
+
+	# Fix - change service directory path
+	sed -i -e 's:^char \*varservice ="/service/";$:char \*varservice ="/var/service/";:' src/sv.c
+
+	# add custom CFLAGS and LDFLAGS instead of predefined ones by the source
+	echo "gcc -Wall -Wno-deprecated-declarations -fpermissive" > src/conf-cc
+	echo "gcc -s" > src/conf-ld
+
+	package/compile
+
+	# default services
+	mkdir -v $PKG/var
+	ln -s ../run/runit/runsvdir/current $PKG/var/service
+
+	# command
+	mkdir -v $PKG/sbin
+	cp -v command/* $PKG/sbin/
+
+	install -d -m 0755 $PKG/usr/share/man/man8
+	install -D -m 0644 $SRC/admin/${name}-${version}/man/* $PKG/usr/share/man/man8
+
+	install -d -m 0755 $PKG/usr/share/zsh/site-functions
+	install -D -m 0644 $SRC/_sv $PKG/usr/share/zsh/site-functions
+	install -d -m 0755 $PKG/usr/share/bash-completion/completions
+	install -D -m 0644 $SRC/sv $PKG/usr/share/bash-completion/completions
+}

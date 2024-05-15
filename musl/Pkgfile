@@ -1,0 +1,77 @@
+# Description:	the musl c library (libc) implementation
+# URL:		https://musl.libc.org/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+
+name=musl
+version=1.2.5
+release=1
+source=(https://musl.libc.org/releases/${name}-${version}.tar.gz \
+	handle-aux-at_base.patch \
+	getconf.c \
+	getent.c \
+	iconv.c)
+
+build() {
+	cd ${name}-${version}
+
+	echo "${version} (build by SAUX-x86_64)" > VERSION
+
+	patch -p1 -i $SRC/handle-aux-at_base.patch
+
+	export CFLAGS="${CFLAGS/ -flto=auto -ffat-lto-objects/}"
+	export CXXFLAGS="${CXXFLAGS/ -flto=auto -ffat-lto-objects/}"
+
+	./configure \
+		--build=$CHOST \
+		--host=$CHOST \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libdir=/lib
+
+	make V=1
+
+	make prefix=/usr DESTDIR=$PKG install-headers
+
+	make DESTDIR=$PKG install
+
+	# getconf, getent, iconv
+	local i
+	for i in getconf getent iconv ; do
+		/usr/bin/cc $CPPFLAGS $CFLAGS $SRC/$i.c -o $i
+	done
+
+	install -D -m 0755 $SRC/${name}-${version}/{getconf,getent,iconv} -t $PKG/usr/bin
+
+	# create ldd
+        cat >>$PKG/usr/bin/ldd <<-EOF
+#!/bin/sh
+exec /lib/libc.so --list "\$@"
+EOF
+	chmod 0755 $PKG/usr/bin/ldd
+
+	# create file for the dynamic linker path
+	install -d $PKG/etc
+	cat >>$PKG/etc/ld-musl-x86_64.path <<-EOF
+#
+# If you want to add your library in a non-standard path, add your own path.
+#
+/lib
+/usr/lib
+/usr/lib/gcc/x86_64-unknown-linux-musl/14.1.0
+EOF
+	chmod 0644 $PKG/etc/ld-musl-x86_64.path
+
+	# create ldconfig file
+	install -d $PKG/sbin
+	cat >>$PKG/sbin/ldconfig <<-EOF
+#!/bin/sh
+/bin/true
+EOF
+	chmod 0755 $PKG/sbin/ldconfig
+
+	# this file requires revdep
+	echo "# this file requires 'revdep'" > $PKG/etc/ld.so.conf
+
+	# provides libxcrypt
+	rm $PKG/usr/include/crypt.h
+}

@@ -1,0 +1,5 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ4bKZYsOEEGyl14IQMGZ6ymtUCYtaX6/7VCSs8rt0iREOfU0KFL22UdxJujT/pb8+zfNzt5uVdtSnBAWHQtk3A0=
+SHA256 (Pkgfile) = 78593c529262f1c10f9429607dad971b5d68a91c54aec19a8a3f974adc9e426b
+SHA256 (.footprint) = ddc5a1a9bec6d3a2b756c0c817cb7fb85fc74295e4f94b59974a6be2b44624e9
+SHA256 (musl-fts-1.2.7.tar.gz) = 49ae567a96dbab22823d045ffebe0d6b14b9b799925e9ca9274d47d26ff482a6

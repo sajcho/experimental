@@ -1,0 +1,6 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZwGihI8TiUNlM/Hx5kERCtsR8IGXu9F2FXKCvs/IR5UYHsP+pfRDo4AatrJbiTH9fF8wWf5+uzzOifNtVrrXTw8=
+SHA256 (Pkgfile) = ea4a20a1c8e9a0c2ecd71869f6434668ba44d2b664c4e30513b30ae197bc0b15
+SHA256 (.footprint) = fbfb89e67cf50c60c1ee41a0d780e2a98210b70097b12187b82d74fa95f09abf
+SHA256 (procps-ng-4.0.4.tar.xz) = 22870d6feb2478adb617ce4f09a787addaf2d260c5a8aa7b17d889a962c5e42e
+SHA256 (sysctl.conf) = 4d3cb2a61ded632b20740628dcd19741a180aaf3b735c6a0d26efb0d3f9e2140

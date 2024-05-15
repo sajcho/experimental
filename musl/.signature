@@ -1,0 +1,9 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ9rvEGRM25EfzeJkHEj6ur50uAKDBhSJAlJ3ujEuU89jU2rjki4CznrE9YMWUEuIZkmZ7Ob3J/AKZ9GIscHsqws=
+SHA256 (Pkgfile) = 8ce06f99117fdbd917667cc7124563dc626fce14fdfcca03d921de049f3031be
+SHA256 (.footprint) = 44697412c87dda02d06a41e4431792dbd799634273ee2e5a46cbda3b9fe9051d
+SHA256 (musl-1.2.5.tar.gz) = a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4
+SHA256 (handle-aux-at_base.patch) = 2a65e03b94217063d72fe998e5fb2e25cd01716078a3ba1b0ab574ab205111e6
+SHA256 (getconf.c) = d87d0cbb3690ae2c5d8cc218349fd8278b93855dd625deaf7ae50e320aad247c
+SHA256 (getent.c) = 002c1a216f6bed0f816ab1cfebde94a0b127193ef410c36b2190599983e015b8
+SHA256 (iconv.c) = f79a2930a2e5bb0624321589edf8b889d1e9b603e01e6b7ae214616605b3fdd7

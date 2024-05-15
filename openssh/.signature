@@ -1,0 +1,7 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ12s38bS6OXxiBv2sAGqAgOYaRsz5BRZXsh/KQRUazLAlAI8y7998i8bWVxp4KzU2AeW3oQstEZy0pdBaRDueQU=
+SHA256 (Pkgfile) = 3d16915dd07e44a70a37f8bd4fd4bcb25c6931db70b7ab7ab53dacf60fa905e3
+SHA256 (.footprint) = 90ea1d6b301a23394d2c200b3d2e942623f648c0be5edf0474abac2d76212eb0
+SHA256 (openssh-9.7p1.tar.gz) = 490426f766d82a2763fcacd8d83ea3d70798750c7bd2aff2e57dc5660f773ffd
+SHA256 (sshd.pam) = 2b1053e21c1b1399281e06cae5c254f7e1109bb27c83ccb49969962d58595415
+SHA256 (sshd.run) = 4ededce0598954a7883be1ed3b129252116ead9e323d691091f1f906f24fc4bc

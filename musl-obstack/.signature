@@ -1,0 +1,5 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ2HobvYo2BsD40VTLNR5I+9o1PmlW/bw2y+0Z4SA4xYC9onL3MKCGI0vO4fPBxiwZdsEc6heBjDeGRDprh1Hyw8=
+SHA256 (Pkgfile) = ca1d965dfb7b21475010f21f4874eaadc8063c797127b1db07d4f184cb8c92cf
+SHA256 (.footprint) = 6b73da60c9e81454229b52b2e3845c5234f135be8832403391cc3ee4a3c2d3e5
+SHA256 (musl-obstack-1.2.3.tar.gz) = 9ffb3479b15df0170eba4480e51723c3961dbe0b461ec289744622db03a69395

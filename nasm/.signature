@@ -1,0 +1,5 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ2uxB9yNQsuvBONa47gLZs9R26csEzDruM0IFvVZPTT/xVEGIxCWXv7F4eopv3M9ASK+f2zvj2ox1KEPvMbxhQA=
+SHA256 (Pkgfile) = 296c7e600f04131ba6e00a08e4742190d060e4b43ae4de0a1a94c1b5a1a94de4
+SHA256 (.footprint) = 2f2595d48b1d9747afa0d6b676a290528c98d1151c567954c594803a07fa9255
+SHA256 (nasm-2.16.03.tar.xz) = 1412a1c760bbd05db026b6c0d1657affd6631cd0a63cddb6f73cc6d4aa616148

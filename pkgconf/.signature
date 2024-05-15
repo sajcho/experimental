@@ -1,0 +1,6 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZzdiqBiW9klFq4Q6K0RobOUuUEuA5IEKFSi55baLGuwh74cew0vbP1IRvDgwVJIElECIlYpBiIja7o5jeTw7owU=
+SHA256 (Pkgfile) = aa3e937053b7ee2116fc9a8def83d25206310cc1de3aac8e86c1d119c285e701
+SHA256 (.footprint) = 3ae4f074f517c5bd1a0ee7ae9a2388e6a1cf28667a4286fc64e35d31389cfad3
+SHA256 (pkgconf-2.2.0.tar.xz) = b06ff63a83536aa8c2f6422fa80ad45e4833f590266feb14eaddfe1d4c853c69
+SHA256 (x86_64-unknown-linux-musl.personality) = 0ce05d0f7dc976c3e3be9fd539a6548fa51f09f1595ff56053fb02a72b553fdd
