@@ -1,3 +1,0 @@
-^lib/ld-.*\.so$
-^lib/libc.so$
-^lib/libpthread-.*\.so$

@@ -1,5 +1,0 @@
-untrusted comment: verify with /etc/ports/core-x86_64.pub
-RWQyKH7cMutLvZSIWcul3mpwSQ7WhMaXijUCcCHtBR+zPNv5hd3hslVPAVAQGPNDEgxqzmpsUmBC3rNx71xP0ofWso97aNHqmwU=
-SHA256 (Pkgfile) = f713f7b86fdc623aafd98064f3abac915ff11e70dcea98438e45b00344c75061
-SHA256 (.footprint) = c842b3c63e4bb202a3da7fb4a61b8025420620c05a889b76c874930ed903d111
-SHA256 (kmod-30.tar.xz) = f897dd72698dc6ac1ef03255cd0a5734ad932318e4adbaebc7338ef2f5202f9f
