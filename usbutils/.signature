@@ -1,0 +1,6 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ/OLAKiiK7NxTnImrK0GdYL5+jvDVI2qngbor7lqX3oYtWv9QEg7Nz+5nHU74VG7GJMRgKB0LhzO3icGwy4I9Aw=
+SHA256 (Pkgfile) = 21d666ce63af2cac8983af5ee3e1ac4e69bca28373da2f8fdb906a304b17f64c
+SHA256 (.footprint) = 5ace5cb60aed7aebb64c493d43a7cf8257547529c48a78737a0f5f9927784064
+SHA256 (usbutils-017.tar.gz) = 7bb79a4c3fc664b700838add2444906919fd1d9bd767a733fc4b23975d2872b7
+SHA256 (update-usbids.sh) = 3055e406e87725a3ab2b87b49a83f73697281d6a5f3d53323202abef2c1f5273

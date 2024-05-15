@@ -1,0 +1,7 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ3aMsLytXSNMgxVgREODmE9hDO1vrOFCoQktiVurxkrRYWZ+xfj7UtZMUZ6H0x5VVPtSEVNgWvMh6qHzONHK+wM=
+SHA256 (Pkgfile) = 8d71014ce49842c056aa1e9fdbfc5b78bcb50fbcb19e815a701c101db64bd65b
+SHA256 (.footprint) = e572bc626d1f2c3b985d95fbcc693c2f41a8bd1165469997090de439614bddd8
+SHA256 (util-linux-2.40.1.tar.xz) = 59e676aa53ccb44b6c39f0ffe01a8fa274891c91bef1474752fad92461def24f
+SHA256 (pam_lastlog2.patch) = 638dd140a0643730d43ed693bbe58e53881eb8e1117d1d8e0bfae765c758be4b
+SHA256 (uuidd.run) = 04707269e2e4056d68197e991251bc6e0a810d832528f8be2087d0f773a6c8a9

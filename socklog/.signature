@@ -1,0 +1,8 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ+YyeJm201Kq33f1XCCLDugIbkYtVXnYMzRMvTcNWFwm52Bp7S6CXWKH8FKY2IgaU2K8Koxd+k0lnz7MvwPKVA0=
+SHA256 (Pkgfile) = b3451ea2fe696fdbc744468a374aa20f12bb818b91d56ecadc1935ebb5b18f89
+SHA256 (.footprint) = 1c8fc007dcf53432f8800f3d56a99b8a1c4879404bd23cbade5ab4b65e8f49f6
+SHA256 (socklog-2.1.0.tar.gz) = aa869a787ee004da4e5509b5a0031bcc17a4ab4ac650c2ce8d4e488123acb455
+SHA256 (cross.patch) = 76ad7430a12725ae01e7d8b41a51c3920379abc86bc928c998d4d90f909d0bba
+SHA256 (patches-fix-build-warnings.patch) = 985c35df1bb4b36a848e2d1609a0ae3e0d79a760c514df6067357bdfaf950719
+SHA256 (tryto-c.patch) = 1b6de71f67d393b27619d78cb343294d36e9695b316c25e88fdd89f2ee1f6322

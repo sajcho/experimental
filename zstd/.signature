@@ -1,0 +1,6 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZxEpg0QAsZI6Dn0qRGLJ3UIqxIM32snFc73o4D51QUOI/qdHYTB8ZimTlrmSju7Cylj2DUpHHbn6zfHFUYmhfgM=
+SHA256 (Pkgfile) = 51de5945f94871f948e200570943e152ecc3cae6c499953d545b15adb6dbc646
+SHA256 (.footprint) = 92c462d0da9d165204a661ff2b758d708302a2a2a3bdfbec6a36ecd33fea1a7e
+SHA256 (zstd-v1.5.6.tar.gz) = 30f35f71c1203369dc979ecde0400ffea93c27391bfd2ac5a9715d2173d92ff7
+SHA256 (disable-warning-decompression-multi-thread.patch) = bcf4d000d85240d8d2693438855ac218a1f93c56b63bfb6be9e5598206b5cd73
