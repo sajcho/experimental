@@ -1,0 +1,234 @@
+prt-get: updating /usr/ports/core-x86_64/pax-utils
+prt-get: starting build Wed May 15 19:00:42 2024
+=======> Building '/home/devel/packages/pax-utils#1.3.7-1.x86_64.pkg.tar.zst'.
+bsdtar -p -o -C /home/devel/building/work/src -xf /home/devel/sources/pax-utils-1.3.7.tar.xz
++ build
++ cd pax-utils-1.3.7
++ build-meson -Dlddtree_implementation=sh -Duse_seccomp=false . build
+The Meson build system
+Version: 1.4.0
+Source dir: /home/devel/building/work/src/pax-utils-1.3.7
+Build dir: /home/devel/building/work/src/pax-utils-1.3.7/build
+Build type: native build
+Project name: pax-utils
+Project version: 1.3.7
+C compiler for the host machine: cc (gcc 14.1.0 "cc (SAUX-x86_64) 14.1.0")
+C linker for the host machine: cc ld.bfd 2.42
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Found pkg-config: YES (/usr/bin/pkg-config) 2.2.0
+Run-time dependency libcap found: YES 2.69
+Has header "endian.h" : YES 
+Has header "byteswap.h" : YES 
+Has header "sys/endian.h" : NO 
+Has header "sys/isa_defs.h" : NO 
+Has header "machine/endian.h" : NO 
+Has header "linux/seccomp.h" : YES 
+Has header "linux/securebits.h" : YES 
+Has header "sys/prctl.h" : YES 
+Has header "alloca.h" : YES 
+Has header "elf-hints.h" : NO 
+Has header "glob.h" : YES 
+Configuring probes.h using configuration
+Fetching value of define "__svr4__" : (undefined) 
+Program xmlto found: NO
+Configuring pax-utils.docbook using configuration
+meson.build:158: WARNING: use_fuzzing requires Clang, due to LibFuzzer. Not building fuzzers
+Build targets in project: 6
+
+pax-utils 1.3.7
+
+  User defined options
+    auto_features         : auto
+    bindir                : /usr/bin
+    buildtype             : plain
+    datadir               : /usr/share
+    includedir            : /usr/include
+    libdir                : /usr/lib
+    libexecdir            : /usr/lib
+    localstatedir         : /var
+    mandir                : /usr/share/man
+    prefix                : /usr
+    sbindir               : /usr/sbin
+    sharedstatedir        : /var/lib
+    sysconfdir            : /etc
+    werror                : false
+    wrap_mode             : nodownload
+    python.bytecompile    : 0
+    b_lto                 : false
+    b_pie                 : true
+    b_staticpic           : true
+    lddtree_implementation: sh
+    use_seccomp           : false
+
+Found ninja-1.9 at /usr/bin/ninja
++ meson compile -j 8 -v -C build
+ninja: entering directory '/home/devel/building/work/src/pax-utils-1.3.7/build'
+[1/20] /usr/bin/meson --internal vcstagger ../version.h.in pax_utils_version.h 1.3.7 /home/devel/building/work/src/pax-utils-1.3.7 @VCS_TAG@ '(.*)' ' '
+[2/20] cc -Iscanmacho.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ scanmacho.p/scanmacho.c.o -MF scanmacho.p/scanmacho.c.o.d -o scanmacho.p/scanmacho.c.o -c ../scanmacho.c
+[3/20] cc -Iscanmacho.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ scanmacho.p/paxmacho.c.o -MF scanmacho.p/paxmacho.c.o.d -o scanmacho.p/paxmacho.c.o -c ../paxmacho.c
+[4/20] cc -Idumpelf.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ dumpelf.p/dumpelf.c.o -MF dumpelf.p/dumpelf.c.o.d -o dumpelf.p/dumpelf.c.o -c ../dumpelf.c
+[5/20] cc -Idumpelf.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ dumpelf.p/paxldso.c.o -MF dumpelf.p/paxldso.c.o.d -o dumpelf.p/paxldso.c.o -c ../paxldso.c
+[6/20] cc -Idumpelf.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ dumpelf.p/paxelf.c.o -MF dumpelf.p/paxelf.c.o.d -o dumpelf.p/paxelf.c.o -c ../paxelf.c
+[7/20] cc -Iscanelf.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ scanelf.p/scanelf.c.o -MF scanelf.p/scanelf.c.o.d -o scanelf.p/scanelf.c.o -c ../scanelf.c
+[8/20] cc -Iscanelf.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ scanelf.p/paxldso.c.o -MF scanelf.p/paxldso.c.o.d -o scanelf.p/paxldso.c.o -c ../paxldso.c
+[9/20] cc -Iscanelf.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ scanelf.p/paxelf.c.o -MF scanelf.p/paxelf.c.o.d -o scanelf.p/paxelf.c.o -c ../paxelf.c
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../paxldso.c:9[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[10/20] cc -Ipspax.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ pspax.p/pspax.c.o -MF pspax.p/pspax.c.o.d -o pspax.p/pspax.c.o -c ../pspax.c
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../paxldso.c:9[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[11/20] cc -Ipspax.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ pspax.p/paxldso.c.o -MF pspax.p/paxldso.c.o.d -o pspax.p/paxldso.c.o -c ../paxldso.c
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../paxldso.c:9[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[12/20] cc -Ipspax.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIE -MD -MQ pspax.p/paxelf.c.o -MF pspax.p/paxelf.c.o.d -o pspax.p/paxelf.c.o -c ../paxelf.c
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../paxmacho.c:10[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[13/20] cc -Ilibcommon.a.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIC -MD -MQ libcommon.a.p/xfuncs.c.o -MF libcommon.a.p/xfuncs.c.o.d -o libcommon.a.p/xfuncs.c.o -c ../xfuncs.c
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../pspax.c:17[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[14/20] cc -Ilibcommon.a.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIC -MD -MQ libcommon.a.p/security.c.o -MF libcommon.a.p/security.c.o.d -o libcommon.a.p/security.c.o -c ../security.c
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../xfuncs.c:9[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[15/20] cc -Ilibcommon.a.p -I. -I.. -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -std=gnu11 -DWANT_SYSCAP -DINCLUDE_GENERATE_VERSION_H '-DVERSION="1.3.7"' -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fPIC -MD -MQ libcommon.a.p/paxinc.c.o -MF libcommon.a.p/paxinc.c.o.d -o libcommon.a.p/paxinc.c.o -c ../paxinc.c
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../paxelf.c:9[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../paxelf.c:9[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../security.c:8[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../scanmacho.c:14[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../paxelf.c:9[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../paxinc.c:12[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[16/20] rm -f libcommon.a && gcc-ar csrDT libcommon.a libcommon.a.p/paxinc.c.o libcommon.a.p/security.c.o libcommon.a.p/xfuncs.c.o
+[17/20] cc  -o scanmacho scanmacho.p/paxmacho.c.o scanmacho.p/scanmacho.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -Wl,--start-group libcommon.a /usr/lib/libcap.so -Wl,--end-group
+[18/20] cc  -o pspax pspax.p/paxelf.c.o pspax.p/paxldso.c.o pspax.p/pspax.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -Wl,--start-group libcommon.a /usr/lib/libcap.so -Wl,--end-group
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../dumpelf.c:11[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[19/20] cc  -o dumpelf dumpelf.p/paxelf.c.o dumpelf.p/paxldso.c.o dumpelf.p/dumpelf.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -Wl,--start-group libcommon.a /usr/lib/libcap.so -Wl,--end-group
+In file included from [01m[K../paxinc.h:37[m[K,
+                 from [01m[K../scanelf.c:11[m[K:
+[01m[K../paxldso.h:19:4:[m[K [01;35m[Kwarning: [m[K#warning Cache support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   19 | #  [01;35m[Kwarning[m[K Cache support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[01m[K../paxldso.h:45:4:[m[K [01;35m[Kwarning: [m[K#warning Cache config support not implemented for your target [[01;35m[K-Wcpp[m[K]
+   45 | #  [01;35m[Kwarning[m[K Cache config support not implemented for your target
+      |    [01;35m[K^~~~~~~[m[K
+[20/20] cc  -o scanelf scanelf.p/paxelf.c.o scanelf.p/paxldso.c.o scanelf.p/scanelf.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -Wl,--start-group libcommon.a /usr/lib/libcap.so -Wl,--end-group
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /home/devel/building/work/src/pax-utils-1.3.7/build -j 8 -v
++ DESTDIR=/home/devel/building/work/pkg
++ meson install --no-rebuild -C build
+Installing pspax to /home/devel/building/work/pkg/usr/bin
+Installing scanelf to /home/devel/building/work/pkg/usr/bin
+Installing dumpelf to /home/devel/building/work/pkg/usr/bin
+Installing scanmacho to /home/devel/building/work/pkg/usr/bin
+Installing /home/devel/building/work/src/pax-utils-1.3.7/man/dumpelf.1 to /home/devel/building/work/pkg/usr/share/man/man1
+Installing /home/devel/building/work/src/pax-utils-1.3.7/man/pspax.1 to /home/devel/building/work/pkg/usr/share/man/man1
+Installing /home/devel/building/work/src/pax-utils-1.3.7/man/scanelf.1 to /home/devel/building/work/pkg/usr/share/man/man1
+Installing /home/devel/building/work/src/pax-utils-1.3.7/man/scanmacho.1 to /home/devel/building/work/pkg/usr/share/man/man1
+Installing /home/devel/building/work/src/pax-utils-1.3.7/lddtree.sh to /home/devel/building/work/pkg/usr/bin
+Installing /home/devel/building/work/src/pax-utils-1.3.7/symtree.sh to /home/devel/building/work/pkg/usr/bin
+=======> Build result:
+drwxr-xr-x  0 root   root        0 May 15 19:00 usr/
+drwxr-xr-x  0 root   root        0 May 15 19:00 usr/bin/
+drwxr-xr-x  0 root   root        0 May 15 19:00 usr/share/
+drwxr-xr-x  0 root   root        0 May 15 19:00 usr/share/man/
+drwxr-xr-x  0 root   root        0 May 15 19:00 usr/share/man/man1/
+-rw-r--r--  0 root   root     1088 Jan 26  2023 usr/share/man/man1/dumpelf.1.gz
+-rw-r--r--  0 root   root     1345 Jan 26  2023 usr/share/man/man1/pspax.1.gz
+-rw-r--r--  0 root   root     4087 Jan 26  2023 usr/share/man/man1/scanelf.1.gz
+-rw-r--r--  0 root   root     3074 Jan 26  2023 usr/share/man/man1/scanmacho.1.gz
+-rwxr-xr-x  0 root   root    26952 May 15 19:00 usr/bin/pspax
+-rwxr-xr-x  0 root   root    88536 May 15 19:00 usr/bin/scanelf
+-rwxr-xr-x  0 root   root    47240 May 15 19:00 usr/bin/dumpelf
+-rwxr-xr-x  0 root   root    39288 May 15 19:00 usr/bin/scanmacho
+-rwxr-xr-x  0 root   root     6253 Jan 26  2023 usr/bin/lddtree
+-rwxr-xr-x  0 root   root     2025 Jan 26  2023 usr/bin/symtree
+=======> Building '/home/devel/packages/pax-utils#1.3.7-1.x86_64.pkg.tar.zst' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /home/devel/packages
+prt-get: reinstalling pax-utils 1.3.7-1
+prt-get: /usr/bin/pkgadd -u pax-utils#1.3.7-1.x86_64.pkg.tar.zst
+prt-get: build done Wed May 15 19:00:46 2024
+

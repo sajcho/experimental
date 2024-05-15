@@ -1,0 +1,23 @@
+prt-get: updating /usr/ports/core-x86_64/bsd-compat-headers
+prt-get: starting build Wed May 15 16:40:02 2024
+=======> Building '/home/devel/packages/bsd-compat-headers#0.7.2-1.x86_64.pkg.tar.zst'.
+cp cdefs.h /home/devel/building/work/src
+cp queue.h /home/devel/building/work/src
+cp tree.h /home/devel/building/work/src
++ build
++ cd /home/devel/building/work/src
++ install -d /home/devel/building/work/pkg
++ install -D -m 0644 -t /home/devel/building/work/pkg/usr/include/sys cdefs.h queue.h tree.h
+=======> Build result:
+drwxr-xr-x  0 root   root        0 May 15 16:40 usr/
+drwxr-xr-x  0 root   root        0 May 15 16:40 usr/include/
+drwxr-xr-x  0 root   root        0 May 15 16:40 usr/include/sys/
+-rw-r--r--  0 root   root      612 May 15 16:40 usr/include/sys/cdefs.h
+-rw-r--r--  0 root   root    30075 May 15 16:40 usr/include/sys/queue.h
+-rw-r--r--  0 root   root    26161 May 15 16:40 usr/include/sys/tree.h
+=======> Building '/home/devel/packages/bsd-compat-headers#0.7.2-1.x86_64.pkg.tar.zst' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /home/devel/packages
+prt-get: reinstalling bsd-compat-headers 0.7.2-1
+prt-get: /usr/bin/pkgadd -u bsd-compat-headers#0.7.2-1.x86_64.pkg.tar.zst
+prt-get: build done Wed May 15 16:40:02 2024
+

@@ -1,0 +1,188 @@
+prt-get: updating /usr/ports/core-x86_64/zstd
+prt-get: starting build Wed May 15 19:18:26 2024
+=======> Building '/home/devel/packages/zstd#1.5.6-1.x86_64.pkg.tar.zst'.
+bsdtar -p -o -C /home/devel/building/work/src -xf /home/devel/sources/zstd-v1.5.6.tar.gz
+cp disable-warning-decompression-multi-thread.patch /home/devel/building/work/src
++ build
++ cd zstd-1.5.6
++ export 'CFLAGS=-O3 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects'
++ CFLAGS='-O3 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects'
++ export 'CXXFLAGS=-O3 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects'
++ CXXFLAGS='-O3 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects'
++ export 'CPPFLAGS=-O3 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects'
++ CPPFLAGS='-O3 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects'
++ patch -p1 -d /home/devel/building/work/src/zstd-1.5.6 -i /home/devel/building/work/src/disable-warning-decompression-multi-thread.patch
+patching file programs/zstdcli.c
+Hunk #1 succeeded at 1298 (offset 7 lines).
++ make prefix=/usr
+make[1]: Entering directory '/home/devel/building/work/src/zstd-1.5.6/lib'
+make[1]: Entering directory '/home/devel/building/work/src/zstd-1.5.6/programs'
+creating pkgconfig
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/debug.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/entropy_common.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/error_private.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/fse_decompress.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/pool.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/threading.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/xxhash.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/debug.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_common.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/entropy_common.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/error_private.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/fse_decompress.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_v05.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_v06.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_v07.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/fse_compress.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/hist.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/pool.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/threading.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/huf_compress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/xxhash.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_compress.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_compress_literals.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_common.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_v05.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/debug.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/entropy_common.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/error_private.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_compress_sequences.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/fse_decompress.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/pool.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_v06.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/threading.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/xxhash.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_common.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_v07.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/fse_compress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/fse_compress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/hist.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_compress_superblock.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/hist.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_double_fast.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/huf_compress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/huf_compress.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_compress.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_fast.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_compress_literals.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_compress.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_compress_sequences.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_lazy.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_ldm.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_opt.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstdmt_compress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_compress_literals.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_compress_superblock.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_compress_sequences.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_compress_superblock.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/huf_decompress.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_double_fast.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_ddict.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_fast.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_lazy.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_decompress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_double_fast.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_fast.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_ldm.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_lazy.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_ldm.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_opt.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zstd_decompress_block.o
+AS obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/huf_decompress_amd64.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstdmt_compress.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_opt.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstdmt_compress.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/huf_decompress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/huf_decompress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_ddict.o
+AS obj/conf_38036d847928526dc27c3814b7c382bc/huf_decompress_amd64.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/cover.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/divsufsort.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_ddict.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_decompress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zstd_decompress_block.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/fastcover.o
+AS obj/conf_28e0d68a14351deac278363b9b12d3ec/static/huf_decompress_amd64.o
+CC obj/conf_7f438d1e3093ee87b2fe7b8523dcf63c/dynamic/zdict.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_decompress.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/cover.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_decompress_block.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/cover.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/divsufsort.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/divsufsort.o
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/fastcover.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/fastcover.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zdict.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_v05.o
+compiling multi-threaded dynamic library 1.5.6
+CC obj/conf_28e0d68a14351deac278363b9b12d3ec/static/zdict.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_v06.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstd_v07.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/benchfn.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/benchzstd.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/datagen.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/dibio.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/fileio.o
+compiling single-threaded static library 1.5.6
+CC obj/conf_38036d847928526dc27c3814b7c382bc/fileio_asyncio.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/lorem.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/timefn.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/util.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstdcli.o
+CC obj/conf_38036d847928526dc27c3814b7c382bc/zstdcli_trace.o
+==> building with threading support
+==> building zstd with .gz compression support
+==> building zstd with .xz/.lzma compression support
+==> building zstd with .lz4 compression support
+LINK obj/conf_38036d847928526dc27c3814b7c382bc/zstd
+creating versioned links
+release build completed
+make[1]: Leaving directory '/home/devel/building/work/src/zstd-1.5.6/lib'
+zstd build completed
+make[1]: Leaving directory '/home/devel/building/work/src/zstd-1.5.6/programs'
++ make prefix=/usr PREFIX=/home/devel/building/work/pkg/usr install
+make[1]: Entering directory '/home/devel/building/work/src/zstd-1.5.6/lib'
+Installing static library
+Installing shared library
+Installing includes
+zstd static and shared library installed
+make[1]: Leaving directory '/home/devel/building/work/src/zstd-1.5.6/lib'
+make[1]: Entering directory '/home/devel/building/work/src/zstd-1.5.6/programs'
+Installing binaries
+Installing man pages
+zstd installation completed
+make[1]: Leaving directory '/home/devel/building/work/src/zstd-1.5.6/programs'
++ find /home/devel/building/work/pkg -type f -name '*.a' -delete
+=======> Build result:
+drwxr-xr-x  0 root   root        0 May 15 19:18 usr/
+drwxr-xr-x  0 root   root        0 May 15 19:18 usr/lib/
+drwxr-xr-x  0 root   root        0 May 15 19:18 usr/include/
+drwxr-xr-x  0 root   root        0 May 15 19:18 usr/bin/
+drwxr-xr-x  0 root   root        0 May 15 19:18 usr/share/
+drwxr-xr-x  0 root   root        0 May 15 19:18 usr/share/man/
+drwxr-xr-x  0 root   root        0 May 15 19:18 usr/share/man/man1/
+-rw-r--r--  0 root   root    11320 May 15 19:18 usr/share/man/man1/zstd.1.gz
+-rw-r--r--  0 root   root      605 May 15 19:18 usr/share/man/man1/zstdgrep.1.gz
+-rw-r--r--  0 root   root      270 May 15 19:18 usr/share/man/man1/zstdless.1.gz
+lrwxrwxrwx  0 root   root        0 May 15 19:18 usr/share/man/man1/zstdcat.1.gz -> zstd.1.gz
+lrwxrwxrwx  0 root   root        0 May 15 19:18 usr/share/man/man1/unzstd.1.gz -> zstd.1.gz
+-rwxr-xr-x  0 root   root  1075000 May 15 19:18 usr/bin/zstd
+lrwxrwxrwx  0 root   root        0 May 15 19:18 usr/bin/zstdcat -> zstd
+lrwxrwxrwx  0 root   root        0 May 15 19:18 usr/bin/unzstd -> zstd
+lrwxrwxrwx  0 root   root        0 May 15 19:18 usr/bin/zstdmt -> zstd
+-rwxr-xr-x  0 root   root      197 May 15 19:18 usr/bin/zstdless
+-rwxr-xr-x  0 root   root     3869 May 15 19:18 usr/bin/zstdgrep
+-rw-r--r--  0 root   root   175838 May 15 19:18 usr/include/zstd.h
+-rw-r--r--  0 root   root     4532 May 15 19:18 usr/include/zstd_errors.h
+-rw-r--r--  0 root   root    26433 May 15 19:18 usr/include/zdict.h
+drwxr-xr-x  0 root   root        0 May 15 19:18 usr/lib/pkgconfig/
+-rwxr-xr-x  0 root   root   957136 May 15 19:18 usr/lib/libzstd.so.1.5.6
+lrwxrwxrwx  0 root   root        0 May 15 19:18 usr/lib/libzstd.so.1 -> libzstd.so.1.5.6
+lrwxrwxrwx  0 root   root        0 May 15 19:18 usr/lib/libzstd.so -> libzstd.so.1.5.6
+-rw-r--r--  0 root   root      456 May 15 19:18 usr/lib/pkgconfig/libzstd.pc
+=======> Building '/home/devel/packages/zstd#1.5.6-1.x86_64.pkg.tar.zst' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /home/devel/packages
+prt-get: reinstalling zstd 1.5.6-1
+prt-get: /usr/bin/pkgadd -u zstd#1.5.6-1.x86_64.pkg.tar.zst
+prt-get: build done Wed May 15 19:18:47 2024
+

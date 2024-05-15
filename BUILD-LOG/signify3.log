@@ -1,0 +1,180 @@
+prt-get: updating /usr/ports/core-x86_64/signify3
+prt-get: starting build Wed May 15 19:11:50 2024
+=======> Building '/home/devel/packages/signify3#32-1.x86_64.pkg.tar.zst'.
+bsdtar -p -o -C /home/devel/building/work/src -xf /home/devel/sources/signify-32.tar.gz
++ build
++ cd signify-32
++ sed 's|/etc/signify|/etc/ports|' -i signify.c
++ CFLAGS+=' -fpermissive'
++ make V=1
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o crypto_api.o crypto_api.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o mod_ed25519.o mod_ed25519.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o mod_ge25519.o mod_ge25519.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o fe25519.o fe25519.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o sc25519.o sc25519.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -Wno-pointer-sign -include compat.h -DBUNDLED_BZERO=1  -c -o bcrypt_pbkdf.o bcrypt_pbkdf.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o timingsafe_bcmp.o timingsafe_bcmp.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o blowfish.o blowfish.c
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/libutil.h:43,
+                 from /usr/include/bsd/stdlib.h:37,
+                 from crypto_api.h:12,
+                 from mod_ed25519.c:9:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/libutil.h:43,
+                 from /usr/include/bsd/stdlib.h:37,
+                 from crypto_api.h:12,
+                 from fe25519.h:12,
+                 from fe25519.c:12:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/libutil.h:43,
+                 from /usr/include/bsd/stdlib.h:37,
+                 from crypto_api.h:12,
+                 from fe25519.h:12,
+                 from mod_ge25519.c:10:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/string.h:37,
+                 from timingsafe_bcmp.c:18:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/libutil.h:43,
+                 from /usr/include/bsd/stdlib.h:37,
+                 from crypto_api.h:12,
+                 from sc25519.h:12,
+                 from sc25519.c:9:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/string.h:37,
+                 from crypto_api.c:8:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/libutil.h:43,
+                 from /usr/include/bsd/stdlib.h:37,
+                 from bcrypt_pbkdf.c:21:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o base64.o base64.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o ohash.o ohash.c
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/inttypes.h:37,
+                 from /usr/include/netinet/in.h:9,
+                 from base64.c:47:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/libutil.h:43,
+                 from /usr/include/bsd/stdlib.h:37,
+                 from ohash.c:21:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o sha2.o sha2.c
+sed -e 's/hashinc/sha2.h/g' \
+    -e 's/HASH/SHA256/g' \
+    -e 's/SHA[0-9][0-9][0-9]_CTX/SHA2_CTX/g' helper.c > sha256hl.c
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/string.h:37,
+                 from sha2.c:39:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+sed -e 's/hashinc/sha2.h/g' \
+    -e 's/HASH/SHA512/g' \
+    -e 's/SHA[0-9][0-9][0-9]_CTX/SHA2_CTX/g' helper.c > sha512hl.c
+sed -e 's/hashinc/sha2.h/g' \
+    -e 's/HASH/SHA512_256/g' \
+    -e 's/SHA512_256_CTX/SHA2_CTX/g' helper.c > sha512_256hl.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -Wno-pointer-sign -include compat.h -DBUNDLED_BZERO=1  -c -o signify.o signify.c
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/inttypes.h:37,
+                 from /usr/include/netinet/in.h:9,
+                 from signify.c:19:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+signify.c: In function 'parseb64file':
+signify.c:144:13: warning: implicit declaration of function 'b64_pton' [-Wimplicit-function-declaration]
+  144 |         if (b64_pton(commentend + 1, buf, buflen) != buflen)
+      |             ^~~~~~~~
+signify.c: In function 'createheader':
+signify.c:231:13: warning: implicit declaration of function 'b64_ntop' [-Wimplicit-function-declaration]
+  231 |         if (b64_ntop(buf, buflen, b64, sizeof(b64)) == -1)
+      |             ^~~~~~~~
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -Wno-pointer-sign -include compat.h -DBUNDLED_BZERO=1  -c -o zsig.o zsig.c
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/err.h:29,
+                 from zsig.c:20:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o explicit_bzero.o explicit_bzero.c
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/string.h:37,
+                 from explicit_bzero.c:8:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o pledge_noop.o pledge_noop.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o sha256hl.o sha256hl.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o sha512hl.o sha512hl.c
+cc -O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects -fpermissive  -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wall -include compat.h -DBUNDLED_BZERO=1  -c -o sha512_256hl.o sha512_256hl.c
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/libutil.h:43,
+                 from /usr/include/bsd/stdlib.h:37,
+                 from sha512hl.c:29:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/libutil.h:43,
+                 from /usr/include/bsd/stdlib.h:37,
+                 from sha256hl.c:29:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:50,
+                 from /usr/include/bsd/libutil.h:43,
+                 from /usr/include/bsd/stdlib.h:37,
+                 from sha512_256hl.c:29:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+cc  -o signify crypto_api.o mod_ed25519.o mod_ge25519.o fe25519.o sc25519.o bcrypt_pbkdf.o timingsafe_bcmp.o blowfish.o base64.o ohash.o sha2.o sha256hl.o sha512hl.o sha512_256hl.o signify.o zsig.o explicit_bzero.o pledge_noop.o -lbsd 
+/usr/bin/ld: /lib/../lib/libc.so: warning: The fgetln() function cannot be safely ported, use getline(3) instead, as it is supported by GNU and POSIX.1-2008.
++ make PREFIX=/usr DESTDIR=/home/devel/building/work/pkg install
+gzip -9c signify.1 > signify.1.gz
+install -m 755 -d /home/devel/building/work/pkg/usr/bin
+install -m 755 -t /home/devel/building/work/pkg/usr/bin signify
+install -m 755 -d /home/devel/building/work/pkg/usr/share/man/man1
+install -m 644 -t /home/devel/building/work/pkg/usr/share/man/man1 signify.1.gz
+=======> Build result:
+drwxr-xr-x  0 root   root        0 May 15 19:11 usr/
+drwxr-xr-x  0 root   root        0 May 15 19:11 usr/bin/
+drwxr-xr-x  0 root   root        0 May 15 19:11 usr/share/
+drwxr-xr-x  0 root   root        0 May 15 19:11 usr/share/man/
+drwxr-xr-x  0 root   root        0 May 15 19:11 usr/share/man/man1/
+-rw-r--r--  0 root   root     2300 May 15 19:11 usr/share/man/man1/signify.1.gz
+-rwxr-xr-x  0 root   root   178536 May 15 19:11 usr/bin/signify
+=======> Building '/home/devel/packages/signify3#32-1.x86_64.pkg.tar.zst' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /home/devel/packages
+prt-get: reinstalling signify3 32-1
+prt-get: /usr/bin/pkgadd -u signify3#32-1.x86_64.pkg.tar.zst
+prt-get: build done Wed May 15 19:11:52 2024
+
