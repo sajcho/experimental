@@ -1,0 +1,34 @@
+# Description:	Extented attributes library
+# URL:		http://savannah.nongnu.org/projects/attr/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+
+name=attr
+version=2.5.2
+release=1
+source=(http://download-mirror.savannah.gnu.org/releases/${name}/${name}-${version}.tar.gz \
+	0001-attr.c-Include-libgen.h-for-posix-version-of-basenam.patch)
+
+build() {
+	cd ${name}-${version}
+
+	patch -p1 -i $SRC/0001-attr.c-Include-libgen.h-for-posix-version-of-basenam.patch
+
+	./configure \
+		--prefix=/usr \
+		--bindir=/bin \
+		--sysconfdir=/etc \
+		--disable-static
+
+	make V=1
+
+	make DESTDIR=$PKG install
+
+	install -d $PKG/lib
+	mv $PKG/usr/lib/libattr.so.* $PKG/lib
+	rm $PKG/usr/lib/libattr.so
+	ln -sf ../../lib/$(readlink $PKG/lib/libattr.so.1) $PKG/usr/lib/libattr.so
+
+	rm -r $PKG/usr/share/doc
+
+	find $PKG -type f -name '*.la' -delete
+}

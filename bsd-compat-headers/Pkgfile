@@ -1,0 +1,17 @@
+# Description:	BSD compatibility headers (cdefs, queue, tree)
+# URL:		https://gitlab.alpinelinux.org/alpine/aports
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+
+name=bsd-compat-headers
+version=0.7.2
+release=1
+source=(cdefs.h queue.h tree.h)
+
+build() {
+	cd $SRC
+
+	install -d $PKG
+
+	install -D -m 0644 -t $PKG/usr/include/sys \
+		cdefs.h queue.h tree.h
+}

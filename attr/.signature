@@ -1,0 +1,6 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ4bQp39lQdtSju5KLgrtgj8ZNQiDhJ5GjwYMtXWELsW/Mu6EB5BpZUKSsVVJpcMVytf6ysDvZajdNdcA5e2zSgU=
+SHA256 (Pkgfile) = a994212537257e096eb060e796e68b19e29d69e2c6a15713821b2da7183f9be1
+SHA256 (.footprint) = 31f7743e82be350e09919191c3fabb42f37eadb3888aec5cc26202f73d7d90c8
+SHA256 (attr-2.5.2.tar.gz) = 39bf67452fa41d0948c2197601053f48b3d78a029389734332a6309a680c6c87
+SHA256 (0001-attr.c-Include-libgen.h-for-posix-version-of-basenam.patch) = c41c6435e06c69d9c0338cc573d5f69a58878944b05ceaf9d7a8935c06154b87

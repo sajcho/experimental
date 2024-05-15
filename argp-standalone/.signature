@@ -1,0 +1,6 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZzp5IfhgnDjk1O6MD966CgxdvS2C5RgYTM9Hfl9ykoEk/AVxkPqYLgai0o0+jY5KfSnAYRpQUWJojIc2yOVaVAY=
+SHA256 (Pkgfile) = b279cd7fc287e366ac224ba2adc797e9731c2fef012b857c2b2f3fb4d0ef33cb
+SHA256 (.footprint) = bc90338beb9733939493aff1a53f0df830d889009bd6746287c85eb00afa6195
+SHA256 (argp-standalone-1.5.0.tar.gz) = c29eae929dfebd575c38174f2c8c315766092cec99a8f987569d0cad3c6d64f6
+SHA256 (gnu89-inline.patch) = 29be7cf514ecebe0c8879e9c510931d5ed03cb5f06ddd230f08b541b168fd5b6
