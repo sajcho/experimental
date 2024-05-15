@@ -1,0 +1,11 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ2qo+yoaEMjrESZhUs3BNKcDh0nVlhO0idtTGaLgiqYoiOvzG2oy29S95vWI0jr1Uocpsg+7mwc69zG2HWyxpAY=
+SHA256 (Pkgfile) = 53448817928973f86a92822537aedcaac19e430d2f0fb0c9bda85fa3eaa2d4e5
+SHA256 (.footprint) = d385e1b3fb0b6aa77e20c777fc2c7d5f171753338dacea67450608233d0f711f
+SHA256 (gcc-14.1.0.tar.xz) = e283c654987afe3de9d8080bc0bd79534b5ca0d681a73a11ff2b5d3767426840
+SHA256 (50_all_cpu_indicator.patch) = f5663d3ad7f6ac8e314664f97d66b4819c77a88f3c0d9b1ee0ff1b377a151ff3
+SHA256 (50_all_libssp_unconditionally.patch) = 9818288691bdf11c97b529ab5d5054ea7ea140f93a258916eb09ee66b4aba84b
+SHA256 (50_all_posix_memalign.patch) = 53f069c39e440bf09389c9fb78f96b390dd31879b3930acbd3256fce2b9326cb
+SHA256 (50_all_sanitizer_lfs.patch) = 108165d63858a2c3d9b6f0b27c1000a915fb9752f5abdd4aa395eb1039ec4124
+SHA256 (c89) = de48736f6e4153f03d0a5d38ceb6c6fdb7f054e8f47ddd6af0a3dbf14f27b931
+SHA256 (c99) = 2513c6d9984dd0a2058557bf00f06d8d5181734e41dcfe07be7ed86f2959622a

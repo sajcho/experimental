@@ -1,0 +1,9 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ75w8AkgbmiKPAeR7rzKAP+wXh1IYPnQKoL45G8CYOeiJeg6MWpTB7zX+u+FbteQlT2cP2ByREDEDYnPldBYoQI=
+SHA256 (Pkgfile) = af1f9eba2530dfbe4b670cbba1e782b2829fce94a7b78b3c76b08ba81033deb3
+SHA256 (.footprint) = d976a32748f339606f0fdd014da8f2e23e2e90f96c7a66f8c09cac22383de3e6
+SHA256 (elfutils-0.191.tar.bz2) = df76db71366d1d708365fc7a6c60ca48398f14367eb2b8954efc8897147ad871
+SHA256 (fix-aarch64_fregs.patch) = a5b131c65927da751aae47a476f26e59ce53300777d54aef6c65c1eceef1a12d
+SHA256 (fix-uninitialized.patch) = ee94f9ab26049f8100db1b6bfc760454f5a220190a5eb907faee65129ec9e962
+SHA256 (musl-asm-ptrace-h.patch) = f03d703dc76002413f4cd04e82c1da79365885df65fbd4eb660f1de42ee41ba9
+SHA256 (musl-macros.patch) = 8e3924f08d4af34a45d0059224ea42b7afdc43837d053243e855cdaf295dde67

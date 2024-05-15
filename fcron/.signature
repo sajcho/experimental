@@ -1,0 +1,8 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ9l5mX5SMlv/8UvrsT7ZgfMpSJTpyVfe85bSGnbr3OUuxFv0MsQ1CemKX8mUOBnx3OpoGaOiD0Xzw21m+eAZHgM=
+SHA256 (Pkgfile) = 31b53430fa6344f3d60afc70b12bde47ec92a5b7be0b9bdd13c6195c962f106a
+SHA256 (.footprint) = ce29a7575eede7ec8dd260e29cb115c4be448f7d2f8fe23042583b93a5ac46be
+SHA256 (fcron-3.3.1.src.tar.gz) = f359daa08a63ddfb7fe2f964bb3f5c52244c25aa36f9225a3cc54d36f4681106
+SHA256 (fcron.run) = c6eedc833799bc2139c3fc6a196cf8efccbfa86eb4f49fc515f38b3cb0b03258
+SHA256 (runjobs) = c861105f2b04ad07cade83f3677fd261ae96ad2ef22a27e21e5490b97eecee4b
+SHA256 (systab.orig) = 768de3cddf3dee50a80a154282a9efa9195dfd60fdb0ba2a0ac4401ac7a9eb69

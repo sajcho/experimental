@@ -1,0 +1,13 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ3Bo6naMlXZg1Q49E0nS5YNYw5XwOYq/5HOEZDHCTc40P8M5Zu2iOeSSur7HoH4TK+SwL5X2ZxKdE8mnDWdnnAw=
+SHA256 (Pkgfile) = 6a3dea08969df505914f1506c2ff6105bd62f2249eac499ca4f3c031a73f2e3c
+SHA256 (.footprint) = 8562c41464636d2beab29e18f0daf6b869b29f36e2b32b45c782781bf2e8aa4d
+SHA256 (gpm-1.20.7.tar.bz2) = f011b7dc7afb824e0a017b89b7300514e772853ece7fc4ee640310889411a48d
+SHA256 (gpm-1.20.7-gcc-10.patch) = c77d1b2811249c6e08439274ba2867cb3fd210f1aa44d5f693599d6addedc9bb
+SHA256 (gpm-1.20.7-gcc-include.patch) = c84e58fafa28457e1592ecfb25d64e413afe7634ea39602616c38a6212c1d072
+SHA256 (gpm-1.20.7-glibc-2.26.patch) = 71784722f92f65eee651d982f16235bf6eac922a3ab8c936bc85c59700f6ad29
+SHA256 (gpm-1.20.7-musl.patch) = 9c67deec688e41bb31d7abc930c193bfbc5b3d1eba0bfe0cac9f8a2181e042a1
+SHA256 (gpm-1.20.7-signedness.patch) = 063ac575d27a19ce8eb85dc2c6fc4007ef9a9168af97a1adcea028456d6b3834
+SHA256 (gpm-1.20.7-sysmacros.patch) = 786f6adeb7d89cbdb2b776c3aace14697b7a4ef5f6ef29113afefa972d35f285
+SHA256 (gpm-1.20.7-warnings.patch) = e06bac16d2e339d6c29f1fbc341378e745af37936dd44858a3c06d3c64671b05
+SHA256 (gpm.run) = 71198a371cfa3aab134b71247a75b65e84a015b3a7bb7a43d4273edfb07db890

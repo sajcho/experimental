@@ -1,0 +1,44 @@
+# Description:	A collection of utilities to handle ELF objects.
+# URL:		https://sourceware.org/elfutils/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	bzip2 xz zlib zstd
+
+name=elfutils
+version=0.191
+release=1
+source=(https://sourceware.org/${name}/ftp/${version}/${name}-${version}.tar.bz2 \
+	fix-aarch64_fregs.patch \
+	fix-uninitialized.patch \
+	musl-asm-ptrace-h.patch \
+	musl-macros.patch)
+
+build() {
+	cd ${name}-${version}
+
+	patch -p1 -i $SRC/fix-aarch64_fregs.patch
+	patch -p1 -i $SRC/fix-uninitialized.patch
+	patch -p1 -i $SRC/musl-asm-ptrace-h.patch
+	patch -p1 -i $SRC/musl-macros.patch
+
+	export CFLAGS="$CFLAGS -D_GNU_SOURCE -Wno-error -Wno-null-dereference"
+
+	./configure \
+		--build=$CHOST \
+		--host=$CHOST \
+		--prefix=/usr \
+		--program-prefix=eu- \
+		--enable-deterministic-archives \
+		--enable-maintainer-mode \
+		--disable-libdebuginfod \
+		--disable-debuginfod \
+		--disable-static \
+		--disable-nls \
+		--disable-werror \
+		--with-zstd
+
+	make V=1
+
+	make DESTDIR=$PKG install
+
+	find $PKG -type f -name '*.a' -delete
+}

@@ -1,0 +1,35 @@
+# Description:	Berkeley DB.
+# URL:		http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+
+name=db
+version=6.2.32
+release=1
+source=(http://download.oracle.com/berkeley-db/${name}-${version}.tar.gz)
+
+build() {
+	cd ${name}-${version}
+
+	cd build_unix
+
+	../dist/configure \
+		--build=$CHOST \
+		--host=$CHOST \
+		--prefix=/usr \
+		--enable-compat185 \
+		--enable-shared \
+		--enable-cxx \
+		--enable-dbm \
+		--disable-static \
+		--disable-stl
+
+	make V=1
+
+	make DESTDIR=$PKG install
+
+	chmod -R +w $PKG
+
+	rm -r $PKG/usr/docs
+
+	find $PKG -type f -name '*.la' -delete
+}
