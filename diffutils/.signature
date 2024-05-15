@@ -1,5 +1,0 @@
-untrusted comment: verify with /etc/ports/core-x86_64.pub
-RWQyKH7cMutLvcKus2b8hwHu+9Dnts9upLGcThad31dkEmPVfq1BJJuMb8gWTcKJlDCgHbqtPzgfYvNp+V3NiFg8senyoNs/lQk=
-SHA256 (Pkgfile) = 0c040e4ecfab6973aa5afb1de7867ae8d113755f618fb66b84ff3036ebbb151d
-SHA256 (.footprint) = 7f86d42a0065b9a9bed6b2c2355debc433ee2277c3f8a583a0729cd2a76f807c
-SHA256 (diffutils-3.10.tar.xz) = 90e5e93cc724e4ebe12ede80df1634063c7a855692685919bfe60b556c9bd09e

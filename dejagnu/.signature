@@ -1,5 +1,0 @@
-untrusted comment: verify with /etc/ports/core-x86_64.pub
-RWQyKH7cMutLvfNgNUlD091kmpyUazaDfAESkg92caYVrGyeyyGEun7Ekrp4+PNel2tUm8YQ6EJvvGDsfqkjYsPEJathNUT7uA0=
-SHA256 (Pkgfile) = fd6f212da0d7ca77ffd638bfcca93eef1efc5d13a31441a45b368fcb1406dec1
-SHA256 (.footprint) = 42c34102e94e46954971aaeba7c588e63996c18dc20a1cd3e1c557a638fe153c
-SHA256 (dejagnu-1.6.3.tar.gz) = 87daefacd7958b4a69f88c6856dbd1634261963c414079d0c371f589cd66a2e3

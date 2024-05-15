@@ -1,6 +1,0 @@
-untrusted comment: verify with /etc/ports/core-x86_64.pub
-RWQyKH7cMutLvUBChcdtF1XEPOmyO5koTshHh12hIWpx678Q8y1uk4zjLs/y10QL+L6fM037Cgwfzw9kDv+Vsqy+MOLP9DK+gAM=
-SHA256 (Pkgfile) = 4d4901ac3eca0591e638a456aeda903c0bb2f0896785a63b554c925993945311
-SHA256 (.footprint) = 1193768eba5613d3181e37fac5df8a436cdd96ccffb04e39f0a73d7bf35d1c10
-SHA256 (db-5.3.28.tar.gz) = e0a992d740709892e81f9d93f06daf305cf73fb81b545afe72478043172c3628
-SHA256 (0001-atomic-Rename-local-__atomic_compare_exchange-to-avo.patch) = 696ac5af5473f0d85ecc6af44a85333c91500721fb5c33028c05e843429058d1
