@@ -1,21 +1,8 @@
 # saux - experimental repository
 
-## arch x86_64
+## arch x86_64 - built with use musl (libc)
 
-Source packages used:
+### Compiled using flags:
 
-#### GCC 13.2.0-RC-20230720
-
-#### Binutils 2.40.90.20230703
-
-#### Glibc 2.37.9000
-
-#### Kernel 6.4.5 headers
-
-#### Perl 5.38.0
-
-#### Python 3.12.0b4
-
-#### Libxcrypt 4.4.36
-
-Compiled using LTO flags.
+CFLAGS="-O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects"
+CXXFLAGS="-O2 -m64 -march=x86-64 -mtune=generic -flto=auto -ffat-lto-objects"
