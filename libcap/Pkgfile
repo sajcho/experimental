@@ -1,0 +1,30 @@
+# Description:	POSIX.1e capabilities library
+# URL:		http://sites.google.com/site/fullycapable/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	attr
+
+name=libcap
+version=2.69
+release=1
+source=(https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/${name}-${version}.tar.xz)
+
+build() {
+	cd ${name}-${version}
+
+	sed "/^CFLAGS/s/-O2/$CFLAGS/" -i Make.Rules
+	sed "/^PROGS/s/$/ capsh/" -i progs/Makefile
+
+	make lib=lib prefix=/usr \
+		GOLANG=no \
+		RAISE_SETFCAP=no \
+		PKGCONFIGDIR=/usr/lib/pkgconfig
+
+	make lib=lib prefix=/usr \
+		GOLANG=no \
+		RAISE_SETFCAP=no \
+		PKGCONFIGDIR=/usr/lib/pkgconfig \
+		DESTDIR=$PKG \
+		install
+
+	find $PKG -type f -name '*.la' -delete
+}

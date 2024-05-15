@@ -1,0 +1,26 @@
+# Description:	An interface to the Linux Kernel's syscall filtering mechanism
+# URL:		https://github.com/seccomp/libseccomp
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	gperf
+
+name=libseccomp
+version=2.5.5
+release=1
+source=(https://github.com/seccomp/libseccomp/releases/download/v${version}/${name}-${version}.tar.gz \
+	remove-redefinition-prctl.patch)
+
+build() {
+	cd ${name}-${version}
+
+	patch -p1 -i $SRC/remove-redefinition-prctl.patch
+
+	./configure \
+		--prefix=/usr \
+		--disable-static
+
+	make V=1
+
+	make DESTDIR=$PKG install
+
+	find $PKG -type f -name '*.la' -delete
+}

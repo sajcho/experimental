@@ -1,0 +1,5 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ5b5uypOOCGN4TPS7ZqBq0p0i3BspIyqc1mOf2332A8v4lksQqs2+7Kh+JgUdavWfiAbS7TXXZyuILCs4M+hVgg=
+SHA256 (Pkgfile) = 60bf97361560801cf5e0ab856a45dbaf23a592f2b8e0ed72549f8f92249111fd
+SHA256 (.footprint) = 54a139e54c79e1f83f88a31362d0e8b104be9194ad7d4d9041d9357fb1a39f04
+SHA256 (libffi-3.4.6.tar.gz) = b0dea9df23c863a7a50e825440f3ebffabd65df1497108e5d437747843895a4e

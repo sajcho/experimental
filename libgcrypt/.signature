@@ -1,0 +1,5 @@
+untrusted comment: verify with opt-x86_64.pub
+RWRkiJhlUJEGrN+jOXP+l0Ovk+KDb4uvIEzMUE6d9rEaEWddP1eZj7HwKtcCAoL2i4Uaz7ZDC3htQnndhJvVF8WKw4Hd9xo9eQ0=
+SHA256 (Pkgfile) = 258f436f4575a51c0847ac39639ca598a6c6bd6f7f53111562d2254d5def29c5
+SHA256 (.footprint) = 692dc2bb471547b590d41303d985efe312f466497c3da3092c0fbdc8db2788d4
+SHA256 (libgcrypt-1.10.3.tar.bz2) = 8b0870897ac5ac67ded568dcfadf45969cfa8a6beb0fd60af2a9eadc2a3272aa

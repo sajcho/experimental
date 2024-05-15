@@ -1,0 +1,5 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ0eTqxHDPqNRHDvVL8JKrQY922DQwdLm4fU+YBGGOSyKtbjQnrbgwCAmB9R8QjEbrxB2LuYzpwtLCCXtfgKdagg=
+SHA256 (Pkgfile) = d26325961bdfef68227666a7b4fccdcded0590a26ce94e02b25d76a1639d2a98
+SHA256 (.footprint) = 7e39a33d28bba432ad2aa233d64f2530cd934b9af2de3b9cc67ce1c7f6dc4f62
+SHA256 (libuv-v1.48.0.tar.gz) = 7f1db8ac368d89d1baf163bac1ea5fe5120697a73910c8ae6b2fffb3551d59fb

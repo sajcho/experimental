@@ -1,0 +1,7 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZ+0ALBY6wipbylYHQP5U7XRQquCZzX/o/3xmu9O6gkSKAgfBh3w7nOdGf1mAcoc7lndQm3q21NnFPvyO023mKQw=
+SHA256 (Pkgfile) = f9f311b9837e9789bcb2bd1a7836811882cbc088593b50ac736a5e9b04e01a5e
+SHA256 (.footprint) = eee3456a8628ffe7c82b718bcbf57db7e69fda3c4ad905df2ce991da64514960
+SHA256 (kmod-32.tar.xz) = 630ed0d92275a88cb9a7bf68f5700e911fdadaf02e051cf2e4680ff8480bd492
+SHA256 (portable-basename.patch) = e5972dc4a9b93a7b4ebe3dfe96c6bc1db7a8a82aafe6450b380d24525a989e13
+SHA256 (strndupa.patch) = aea9bdad0e6d0c6c5d9c3f1fe1f84f85babcd52b3077336552ae73ccbc4b0a36

@@ -1,0 +1,7 @@
+untrusted comment: verify with core-x86_64.pub
+RWQ0XEjKMixyZwcNiliF+KhbUPjuUjM7vZuKEWhhjHh4iRcPuKmdUJtSLQexCzli7cPJumLdvl3ngbPEHNcInK6xawu0TrR/PAY=
+SHA256 (Pkgfile) = 9153413491151c1e83fdaf63a016a899de19824893186a9322c24390f38f2b03
+SHA256 (.footprint) = 4038a8738fab6c7a79b45848787f9bf54276f8d1824f97f6748492fe33054822
+SHA256 (iproute2-6.9.0.tar.xz) = 2f643d09ea11a4a2a043c92e2b469b5f73228cbf241ae806760296ed0ec413d0
+SHA256 (basename.patch) = ad85de8dd8b5a9ed124d715ac13aed870f595f87adc59cdf108f7944d5a7f708
+SHA256 (musl-timeval.patch) = d51d4033b9ad5258444ea6224e5ea7296d3d9a951e692f71e5c48c0499a3b51a

@@ -1,0 +1,50 @@
+# Description:	Kernel module utilities and library
+# URL:		http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	zstd
+
+name=kmod
+version=32
+release=1
+source=(https://www.kernel.org/pub/linux/utils/kernel/${name}/${name}-${version}.tar.xz \
+	portable-basename.patch \
+	strndupa.patch)
+
+build() {
+	cd ${name}-${version}
+
+	patch -p1 -i $SRC/portable-basename.patch
+	patch -p1 -i $SRC/strndupa.patch
+
+	./configure \
+		--build=$CHOST \
+		--host=$CHOST \
+		--prefix=/usr \
+		--bindir=/sbin \
+		--sysconfdir=/etc \
+		--disable-manpages \
+		--with-rootlibdir=/lib \
+		--with-zlib \
+		--with-xz \
+		--with-zstd \
+		--with-openssl
+
+	make V=1
+
+	make DESTDIR=$PKG install
+
+	install -d $PKG/etc/{modprobe,depmod}.d
+	install -d $PKG/bin
+
+	install -d $PKG/usr/share/man/{man5,man8}
+	install -m 0644 man/*.5 $PKG/usr/share/man/man5
+	install -m 0644 man/*.8 $PKG/usr/share/man/man8
+
+	ln -s ../sbin/kmod $PKG/bin/lsmod
+	ln -s ../sbin/kmod $PKG/bin/modinfo
+
+	# remove bash-completion stuff
+	rm -r $PKG/usr/share/bash-completion
+
+	find $PKG -type f -name '*.la' -delete
+}
