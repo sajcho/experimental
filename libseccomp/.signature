@@ -1,5 +1,0 @@
-untrusted comment: verify with /etc/ports/core-x86_64.pub
-RWQyKH7cMutLvb4vzskGPoYYAyD9u3NFtMw6UFxzurtlTEpRiPC8H1UaVBSL3dLMC6aQGSmrnPDUbNn4iduMNHfZHuE82VBbPw8=
-SHA256 (Pkgfile) = c23fe591d592ee8a7bf40acf82b8f909a242565d98caa2b825781bfece2f5345
-SHA256 (.footprint) = 518236d47b54a63a3559d43d02df1ec7406b05ac14ba793f1dbbc8374dfe94e9
-SHA256 (libseccomp-2.5.4.tar.gz) = d82902400405cf0068574ef3dc1fe5f5926207543ba1ae6f8e7a1576351dcbdb
